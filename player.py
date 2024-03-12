@@ -19,3 +19,6 @@ class Player(Turtle):
 
     def refresh(self):
         self.goto(STARTING_POSITION)
+
+    def is_at_finish_line(self):
+        return self.ycor() > FINISH_LINE_Y

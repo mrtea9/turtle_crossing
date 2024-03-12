@@ -20,8 +20,9 @@ class CarManager:
         car.shapesize(stretch_wid=1, stretch_len=2)
         car.penup()
         car.color(random.choice(COLORS))
+        random_y = random.randint(-250, 250)
         car.setheading(180)
-        car.goto(new_x, random.randint(-250, 250))
+        car.goto(new_x, random_y)
         self.cars.append(car)
 
     def move_cars(self):

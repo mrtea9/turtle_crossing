@@ -12,14 +12,14 @@ class Scoreboard(Turtle):
         self.penup()
         self.hideturtle()
         self.goto(START_POSITION)
-        self.level = 0
-        self.show()
+        self.level = 1
+        self.update_scoreboard()
 
     def add_point(self):
         self.level += 1
-        self.show()
+        self.update_scoreboard()
 
-    def show(self):
+    def update_scoreboard(self):
         self.clear()
         self.write(f"Level: {self.level}", font=FONT)
 

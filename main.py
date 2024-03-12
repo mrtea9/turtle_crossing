@@ -22,7 +22,7 @@ while game_is_on:
     screen.update()
     car_manager.move_cars()
 
-    if player.ycor() > 280:
+    if player.is_at_finish_line():
         scoreboard.add_point()
         car_manager.increase_speed()
         player.refresh()
